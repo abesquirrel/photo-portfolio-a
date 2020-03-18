@@ -169,7 +169,7 @@
   height: auto;
   min-height: 35rem;  
   padding-top: 10rem;
-  padding-bottom: 15rem;
+  padding-bottom: 10rem;
   background: linear-gradient(to bottom, #161616 0%, rgba(22, 22, 22, 0.9) 60%, rgba(22, 22, 22, 0.8) 100%), url("https://res.cloudinary.com/sehnsucht/image/upload/c_crop,h_1500,q_100,w_3304,y_634/v1584429877/cityscape/midtown_cloudy.png");
   background-position: center;
   background-repeat: no-repeat;
