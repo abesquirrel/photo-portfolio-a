@@ -181,7 +181,7 @@
     margin-bottom: 5rem;
   }
   
-  .gallery-section {
+  .gallery-section { 
     padding: 10rem 0;
   }
   
@@ -196,7 +196,7 @@
     }
   }
   
-  .gallery-section .gallery-text {
+  .gallery-section .gallery-text { 
     padding: 3rem;
     font-size: 90%;
   }

@@ -4,7 +4,7 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-grayscale/blob/master/LICENSE)
  */
 
-#mainNav {
+ #mainNav {
   min-height: 56px;
   background-color: #fff;
 }
@@ -181,7 +181,7 @@
   margin-bottom: 5rem;
 }
 
-.gallery-section {
+.gallery-section { 
   padding: 10rem 0;
 }
 
@@ -196,7 +196,7 @@
   }
 }
 
-.gallery-section .gallery-text {
+.gallery-section .gallery-text { 
   padding: 3rem;
   font-size: 90%;
 }
