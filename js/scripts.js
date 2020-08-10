@@ -9,7 +9,7 @@ $(document).ready(function() {
     images[4] = "https://res.cloudinary.com/sehnsucht/image/upload/v1583899784/cityscape/IMG_20200308_134036_694_4_q78tgj.jpg";
     images[5] = "https://res.cloudinary.com/sehnsucht/image/upload/v1583899760/cityscape/IMG_20200308_134033_217_1_scagwb.jpg";
     images[6] = "https://res.cloudinary.com/sehnsucht/image/upload/v1596598197/03-20/20200307-DSCF7448-Edit_rywc1f.jpg";
-    images[7] = "https://res.cloudinary.com/sehnsucht/image/upload/v1596598196/03-20/20200307-DSCF7462_whxpwv.jpg";
+    images[7] = "https://res.cloudinary.com/sehnsucht/image/upload/v1596598196/03-20/20200307-DSCF7462_windowHeightxpwv.jpg";
     images[8] = "https://res.cloudinary.com/sehnsucht/image/upload/v1596598193/03-20/20200322-DSCF7541_fggvft.jpg";
     images[9] = "https://res.cloudinary.com/sehnsucht/image/upload/v1596598192/03-20/20200307-DSCF7470_azdbwx.jpg";
     images[10] = "https://res.cloudinary.com/sehnsucht/image/upload/v1596598192/03-20/20200307-DSCF7464_dheobk.jpg";
@@ -46,13 +46,16 @@ $(document).ready(function() {
     $(".fancybox").fancybox({
         openEffect: "none",
         closeEffect: "none",
-        keyboard: true,
-        arrows: true,
         buttons: [
             'share',
             'fullScreen',
             'close'
-        ]
+        ],
+        afterShow: function() {
+            this.height = $(window).height();
+            this.width = 'auto'
+        }
+
     });
 
     $(".zoom").hover(function() {
