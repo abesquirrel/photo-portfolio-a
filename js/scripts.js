@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+
+    // Array of images - TODO: find a better source to read the links 
     var images = new Array();
 
     images[0] = "https://res.cloudinary.com/sehnsucht/image/upload/v1583899960/cityscape/70626502_265952317694323_5779666266969453201_n.jpg_exr15e.jpg";
@@ -26,7 +28,7 @@ $(document).ready(function() {
     images[21] = "https://res.cloudinary.com/sehnsucht/image/upload/v1596599151/4-20/20200225-DSCF7291_lrlgcg.jpg";
     images[22] = "https://res.cloudinary.com/sehnsucht/image/upload/v1596598835/4-20/20200225-DSCF7274_z5vd3m.jpg";
 
-    //load image from array
+    // Load image from array
     for (let i = 0; i < images.length; i++) {
         $('#mosaic').prepend(
             $('<div/>')
@@ -34,24 +36,25 @@ $(document).ready(function() {
             .prepend(
                 $('<a/>')
                 .attr('href', images[i])
-                .addClass("fancybox")
+                .addClass("data-fancybox-group")
                 .prepend($('<img/>')
                     .attr('src', images[i])
-                    .attr('alt', " ")
-                    .attr('rel', "gallery01")
+                    .attr('rel', "group1")
                     .addClass("zoom img-fluid")
                 ))
         );
     }
 
-    $(".fancybox").fancybox({
+    // Fancybox gallery setup and behavior
+    $(".data-fancybox-group").fancybox({
         openEffect: "none",
         closeEffect: "none",
         showNavArrows: true,
+        arrows: true,
         buttons: [
             "share",
             "fullScreen",
-            "close",
+            "close"
         ],
 
         afterShow: function() {
@@ -68,6 +71,7 @@ $(document).ready(function() {
 
     });
 
+    // Thumbnail zoom when hover
     $(".zoom").hover(function() {
         $(this).addClass('transition');
     }, function() {
