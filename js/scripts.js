@@ -37,7 +37,8 @@ $(document).ready(function() {
                 .addClass("fancybox")
                 .prepend($('<img/>')
                     .attr('src', images[i])
-                    .attr('alt', "")
+                    .attr('alt', " ")
+                    .attr('rel', "gallery01")
                     .addClass("zoom img-fluid")
                 ))
         );
@@ -46,14 +47,23 @@ $(document).ready(function() {
     $(".fancybox").fancybox({
         openEffect: "none",
         closeEffect: "none",
+        showNavArrows: true,
         buttons: [
-            'share',
-            'fullScreen',
-            'close'
+            "share",
+            "fullScreen",
+            "close",
         ],
+
         afterShow: function() {
-            this.height = $(window).height();
-            this.width = 'auto'
+            let windowHeight = $(window).height() / this.height;
+            let windowWidth = $(window).width() / this.width;
+            if (windowHeight < windowWidth) {
+                this.height = this.height * windowHeight;
+                this.width = this.width * windowHeight;
+            } else {
+                this.height = this.height * windowWidth;
+                this.width = this.width * windowWidth;
+            }
         }
 
     });
